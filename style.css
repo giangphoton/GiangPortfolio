@@ -511,7 +511,7 @@ section#blog_section {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 7rem;
 
-  animation-delay: 0.4s;
+  /* animation-delay: 0.4s; */
 }
 
 #blog_section .post__link {
