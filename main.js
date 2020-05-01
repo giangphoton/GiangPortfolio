@@ -1,3 +1,4 @@
+//jshint esversion:6
 // HEADER NAV 
 $('.open-mobile-menu').on('click', function() {
     $('.top-menu-wrapper').toggleClass('show-offcanvas');
@@ -21,7 +22,7 @@ let lastId,
     menuItems = topMenu.find("a.top-menu_scrolllink"),
     // Anchors corresponding to menu items
     scrollItems = menuItems.map(function(){
-      var item = $($(this).attr("href"));
+      let item = $($(this).attr("href"));
       if (item.length) { return item; }
     });
 
@@ -62,6 +63,47 @@ $(window).scroll(function(){
   }                   
 });
 
+// TRIGGER ANIMATION ON SCROLL
+
+let $window           = $(window),
+win_height_padded = $window.height() * 1.1;
+let isTouch           = Modernizr.touch;
+
+if (isTouch) { $('.revealOnScroll').addClass('animated'); }
+
+$window.on('scroll', revealOnScroll);
+
+function revealOnScroll() {
+  let scrolled = $window.scrollTop(),
+    win_height_padded = $window.height() * 1.1;
+
+  // Showed...
+  $(".revealOnScroll:not(.animated)").each(function () {
+    let $this     = $(this),
+        offsetTop = $this.offset().top;
+
+    if (scrolled + win_height_padded > offsetTop) {
+        window.setTimeout(function(){
+          $this.addClass('animated ' + $this.data('animation'));
+        }, 200);
+    }
+  });
+
+
+  // Hidden...
+  $(".revealOnScroll.animated").each(function (index) {
+    let $this     = $(this),
+        offsetTop = $this.offset().top;
+    if (scrolled + win_height_padded < offsetTop) {
+      $(this).removeClass('animated slideInRight slideInLeft popIn');
+    }
+  });
+}
+
+revealOnScroll();
+
+
+// ANIMATION
 const personalBoxes = document.querySelectorAll('.personal-box');
 // ABOUT-PERSONAL ANIMATION - MOBILE
 personalBoxes.forEach(selectedBox => {

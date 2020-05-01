@@ -633,7 +633,7 @@ section#contact_section {
 .footer .icon-wrap .icon:hover i,
 .footer .icon-wrap .icon:focus i,
 .footer .icon-wrap .icon:active i {
-  -webkit-animation:;
+  -webkit-animation: toBottomFromTop 0.3s forwards;
   -moz-animation: toBottomFromTop 0.3s forwards;
   animation: toBottomFromTop 0.3s forwards;
 }
@@ -675,8 +675,8 @@ section#contact_section {
   color: var(--navy-2);
   font-size: 4.125rem;
   position: relative;
-  animation: slideInLeft 0.75s ease both;
-  -webkit-animation: slideInLeft 0.75s ease both;
+  /* animation: slideInLeft 0.75s ease both;
+  -webkit-animation: slideInLeft 0.75s ease both; */
 }
 
 .primary-heading-bar {
@@ -684,8 +684,8 @@ section#contact_section {
   height: 0.5rem;
   margin: 1.3rem auto;
   width: 8.75rem;
-  animation: slideInLeft 0.75s ease both;
-  -webkit-animation: slideInLeft 0.75s ease both;
+  /* animation: slideInLeft 0.75s ease both;
+  -webkit-animation: slideInLeft 0.75s ease both; */
   animation-delay: 0.25s;
 }
 
@@ -854,7 +854,21 @@ section#contact_section {
 }
 }
 
+/* animation on scroll trigger */
+.animated.popIn {
+  animation: popIn 1s both;
+  -webkit-animation: popIn 1s both;
+}
 
+.animated.slideInLeft {
+  animation: slideInLeft 0.75s ease both;
+  -webkit-animation: slideInLeft 0.75s ease both;
+}
+
+.animated.slideInRight {
+  animation: slideInRight 0.75s ease both;
+  -webkit-animation: slideInRight 0.75s ease both;
+}
 
 /* MQ
     –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -1013,14 +1027,14 @@ section#contact_section {
   }
 
   #contact_section .contact-highlight {
-    animation: slideInRight 0.75s ease both;
-    -webkit-animation: slideInRight 0.75s ease both;
+    /* animation: slideInRight 0.75s ease both;
+    -webkit-animation: slideInRight 0.75s ease both; */
     animation-delay: 0.5s;
   }
 
   #contact_section form.contact-form {
-    animation: popIn 1s both;
-    -webkit-animation: popIn 1s both;
+    /* animation: popIn 1s both;
+    -webkit-animation: popIn 1s both; */
     animation-delay: 0.5s;
   }
 }
