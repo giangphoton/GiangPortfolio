@@ -88,6 +88,17 @@ $('.skill-per').each(function(){
     });
 });
 
+const projects = document.querySelectorAll('#portfolio_section .project');
+
+// PORTFOLIO PROJECT ANIMATION - MOBILE
+projects.forEach(selectedProject => {
+  selectedProject.addEventListener('touchmove', function() {
+    projects.forEach(project => project.classList.remove('touch'));
+    this.classList.add('touch');
+  });
+});
+
+
 // BLOG ANIMATION
 $('.post__link').mouseenter(function() {
   let $this = $(this);
@@ -99,12 +110,13 @@ $('.post__link').mouseleave(function() {
   $('.post__link').removeClass('faded');
 });
 
-const projects = document.querySelectorAll('#portfolio_section .project');
-// PORTFOLIO PROJECT ANIMATION - MOBILE
-projects.forEach(selectedProject => {
-  selectedProject.addEventListener('touchmove', function() {
-    projects.forEach(project => project.classList.remove('touch'));
-    this.classList.add('touch');
+const postLinks = document.querySelectorAll('.post__link');
+
+// BLOG ANIMATION - MOBILE 
+postLinks.forEach(selectedPLink => {
+  selectedPLink.addEventListener('touchmove', function() {
+    postLinks.forEach(post => post.classList.add('faded'));
+    this.classList.remove('faded');
   });
 });
 
