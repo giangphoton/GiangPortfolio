@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Giang Portfolio</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <!-- Navigation -->
+        <nav>
+            <button aria-label="Open Mobile Menu" class="open-mobile-menu fa-lg">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <a href="">
+                <img class="logo horizontal-logo"
+                    src="img/logo/horizontal-logo.svg" alt="gn logo">
+                <img class="logo vertical-logo"
+                    src="img/logo/vertical-logo.svg" alt="gn logo">
+            </a>
+            <div class="top-menu-wrapper">
+                <ul class="top-menu">
+                    <li>
+                        <a href="#about-personal_section" class="top-menu_scrolllink">about</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio_section" class="top-menu_scrolllink">portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#blog_section" class="top-menu_scrolllink">blog</a>
+                    </li>
+                    <li>
+                        <a href="#contact_section" class="top-menu_scrolllink">contact</a>
+                    </li>
+
+                    <li>
+                        <ul class="socials">
+                            <li>
+                                <a href="mailto:gnguyenw@gmail.com?Subject=Hello%20Giang" target="_top">
+                                    <span class="fa-stack fa-2x">
+                                        <i class="fas fa-envelope fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="fa-stack fa-2x">
+                                        <i class="fab fa-facebook fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="fa-stack fa-2x">
+                                        <i class="fab fa-twitter fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="fa-stack fa-2x">
+                                        <i class="fab fa-instagram fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="fa-stack fa-2x">
+                                        <i class="fab fa-youtube fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section id="banner_section">
+            <div class="container">
+                <h1><span>Front End Developer</span></h1>
+                <span class="des">Giang Nguyen</span>
+            </div>
+    </section>
+    <!-- About - Personal  -->
+    <section id="about-personal_section">
+        <div class="heading-container">
+            <div class="primary-heading">about</div>
+            <div class="primary-heading-bar"></div>
+        </div>
+
+        <div class="about-personal_container">
+  
+            <div class="personal-box">
+              <div class="personal-icon">
+                <i class="fab fa-buromobelexperte"></i>
+              </div>
+              <div class="personal-title">Responsive</div>
+              <div class="personal-desc">
+                Layouts will always look good on all devices
+              </div>
+            </div>
+
+            <div class="personal-box">
+                <div class="personal-icon">
+                  <i class="fas fa-meteor"></i>
+                </div>
+                <div class="personal-title">Fast</div>
+                <div class="personal-desc">
+                    Optimizing web pages for maximum speed and scalability
+                </div>
+            </div>
+
+            <div class="personal-box">
+                <div class="personal-icon">
+                  <i class="fab fa-uikit"></i>
+                </div>
+                <div class="personal-title">Intuitive</div>
+                <div class="personal-desc">
+                  Strong preferences for easy to use, UI/UX
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- About - Skills  -->
+    <section id="about-skills_section">
+        <div class="skill">
+            <div class="skill-name">HTML</div>
+            <div class="skill-bar">
+              <div class="skill-per" per="90"></div>
+            </div>
+        </div>
+    
+        <div class="skill">
+            <div class="skill-name">CSS</div>
+            <div class="skill-bar">
+              <div class="skill-per" per="70"></div>
+            </div>
+        </div>
+    
+        <div class="skill">
+            <div class="skill-name">JavaScript</div>
+            <div class="skill-bar">
+              <div class="skill-per" per="70"></div>
+            </div>
+        </div>        
+    </section>
+    <!-- Portfolio  -->
+    <section id="portfolio_section">
+        <div class="heading-container">
+            <div class="primary-heading">portfolio</div>
+            <div class="primary-heading-bar"></div>    
+        </div>
+
+        <div class="projects_container">
+            <div class="project">
+                <img src="img/projects/project-color-game.png" alt="Project 1" class="project__img">    
+                <h5 class="project__name">Color Guessing Game</h5>
+                <div class="project__language">
+                    <p>JavaScript</p>                   
+                </div>
+                <div class="project__description">
+                    <p>Guess the right color (RGB value) provided</p>                   
+                </div>         
+                <a href="http://google.com" class="project__link"><button class="btn">Learn More</button></a>              
+            </div>
+
+            <div class="project">
+                <img src="img/projects/project-pig-game.png" alt="Project 2" class="project__img">    
+                <h5 class="project__name">Dice Pig Game</h5>
+                <div class="project__language">
+                    <p>JavaScript</p>                   
+                </div>
+                <div class="project__description">
+                    <p>Roll the dice and hold to the winning point</p>                   
+                </div>         
+                <a href="http://google.com" class="project__link"><button class="btn">Learn More</button></a>              
+            </div>
+
+            <div class="project">
+                <img src="img/projects/project-pig-game.png" alt="Project 3" class="project__img">    
+                <h5 class="project__name">To-Do List</h5>
+                <div class="project__language">
+                    <p>JavaScript</p>                   
+                </div>
+                <div class="project__description">
+                    <p>Add the task and mark it when completed</p>                   
+                </div>         
+                <a href="http://google.com" class="project__link"><button class="btn">Learn More</button></a>              
+            </div>
+
+            <div class="project">
+                <img src="img/projects/project-todo-list.png" alt="Project 3" class="project__img">    
+                <h5 class="project__name">To-do List</h5>
+                <div class="project__language">
+                    <p>JavaScript</p>                   
+                </div>
+                <div class="project__description">
+                    <p>Add the task and mark it when completed</p>                   
+                </div>         
+                <a href="http://google.com" class="project__link"><button class="btn">Learn More</button></a>              
+            </div>
+        </div>
+    </section>
+    <!-- Blog  -->
+    <section id="blog_section">
+        <div class="heading-container">
+            <div class="primary-heading">blog</div>
+            <div class="primary-heading-bar"></div>    
+        </div>
+
+        <div class="blog_container">
+            <a class="post__link" href="http://google.com">
+                <div class="post">
+                    <img src="img/blog/post-1.jpg" alt="Post 1" class="post__img">    
+                    <div class="post__info">
+                        <h5 class="post__name">Understanding And Overcoming Coder’s Block</h5>
+                        <p class="post__date">NOVEMBER 27, 2017</p>                   
+                    </div>
+                    <div class="post__border"></div>
+                    <div class="post__description">
+                        <p>Coder’s block is a period during which a developer struggles to write good code or any code at all...</p>                   
+                    </div>         
+                </div>            
+            </a>
+
+            <a class="post__link" href="http://google.com">
+                <div class="post">
+                    <img src="img/blog/post-2.jpg" alt="Post 2" class="post__img">    
+                    <div class="post__info">
+                        <h5 class="post__name">UNRAVELING THE BRAIN OF A SOFTWARE DEVELOPER</h5>
+                        <p class="post__date">APRIL 19, 2019</p>                   
+                    </div>
+                    <div class="post__border"></div>
+                    <div class="post__description">
+                        <p>Most of us still have no clue what these mysterious people who spend most days typing symbols...</p>                   
+                    </div>         
+                </div>    
+            </a>
+
+            <a class="post__link" href="http://google.com">
+                <div class="post">
+                    <img src="img/blog/post-3.jpg" alt="Post 3" class="post__img">    
+                    <div class="post__info">
+                        <h5 class="post__name">6 BEST BUILD TOOLS FOR FRONTEND DEVELOPMENT</h5>
+                        <p class="post__date">SEPTEMBER 06, 2019</p>                   
+                    </div>
+                    <div class="post__border"></div>
+                    <div class="post__description">
+                        <p>Code used in production is different from development code. In production, you need to run fast...</p>                   
+                    </div>         
+                </div>
+            </a>
+            
+        </div>
+    </section>
+    <!-- Contact  -->
+    <section id="contact_section">
+        <div class="heading-container">
+            <div class="primary-heading heading--white">contact</div>
+            <div class="primary-heading-bar heading-bar--white"></div>    
+        </div>
+
+        <div class="contact-highlight">
+            Have a question or want to work together?
+        </div>
+
+        <form action="" class="contact-form">
+            <input placeholder="Name" type="text" name="name" required="">
+            <input placeholder="Email" type="email" name="email" required="">
+            <textarea placeholder="Your Message" type="text" name="message"></textarea>
+            <input class="btn btn--form" type="submit" id="submit" value="SUBMIT">
+        </form>
+
+    </section>
+
+    <!-- Footer  -->
+    <footer class="footer">
+        <div class="icon-wrap flex row">
+            <a href="https://www.linkedin.com/in/mattwilliams85">
+              <div class="flex icon" id="icon-2">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+            </a>
+            <a href="https://www.facebook.com/matthew.williams.351">
+              <div class="flex icon" id="icon-3">
+                <i class="fab fa-facebook-f"></i>
+              </div>
+            </a>
+            <a href="https://instagram.com/infinite_edge/">
+              <div class="flex icon" id="icon-4">
+                <i class="fab fa-instagram"></i>
+              </div>
+            </a>
+            <a href="http://codepen.io/matthewwilliams/">
+              <div class="flex icon" id="icon-5">
+                <i class="fas fa-envelope"></i>
+              </div>
+            </a>
+        </div>
+        <small class="info-box">
+            <a href="http://giangphoton.com/" target="_blank">© 2020 Giang Nguyen</a> 
+            <a href="#" class="go-top" style="display: inline;">
+                <i class="fas fa-arrow-up"></i>
+            </a>
+        </small>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
