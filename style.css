@@ -235,6 +235,8 @@ section#banner_section {
   -o-border-radius: 0.3rem;
   box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.16),
     0 0.3rem 0.6rem rgba(0, 0, 0, 0.23);
+
+  animation-delay: 1s;
 }
 
 #banner_section .container h1 {
@@ -508,7 +510,7 @@ section#blog_section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 7rem;
-  
+
   animation-delay: 0.4s;
 }
 
@@ -655,7 +657,6 @@ section#contact_section {
   opacity: 0.6;
   display: block;
   text-align: center;
-
 }
 
 .footer .go-top {
@@ -764,7 +765,11 @@ section#contact_section {
 
 /* ANIMATIONS 
     –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
+/**
+ * ----------------------------------------
+ * animation popIn
+ * ----------------------------------------
+ */
 @-webkit-keyframes popIn {
   0% {
     opacity: 0;
@@ -794,6 +799,48 @@ section#contact_section {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+/**
+ * ----------------------------------------
+ * animation fadeIn
+ * ----------------------------------------
+ */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+}
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+}
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
 }
 
 /**
@@ -845,7 +892,7 @@ section#contact_section {
  * animation toBottomFromTop
  * ----------------------------------------
  */
- @keyframes toBottomFromTop {
+@keyframes toBottomFromTop {
   0% {
     transform: translateY(-50px);
     -webkit-transform: translateY(-50px);
@@ -853,7 +900,7 @@ section#contact_section {
     -ms-transform: translateY(-50px);
     -o-transform: translateY(-50px);
     opacity: 0;
-}
+  }
   90% {
     transform: translateY(0);
     -webkit-transform: translateY(0);
@@ -861,7 +908,7 @@ section#contact_section {
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
     opacity: 1;
-}
+  }
 }
 
 /* animation on scroll trigger */
@@ -878,6 +925,11 @@ section#contact_section {
 .animated.slideInRight {
   animation: slideInRight 0.75s ease both;
   -webkit-animation: slideInRight 0.75s ease both;
+}
+
+.animated.fadeIn {
+  animation: fadeIn 1s both;
+  -webkit-animation: fadeIn 1s both;
 }
 
 /* MQ

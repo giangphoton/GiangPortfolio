@@ -87,7 +87,7 @@ function revealOnScroll() {
         // compare bottom vertical position (Y) of current window (scrolled + win_height)
         // to top vertical position (Y) of current element ($this.offset().top)
         // if scroll over the offsetTop -> execute animation
-    if (scrolled + win_height > offsetTop) {      
+    if (scrolled + win_height > offsetTop) {   
         window.setTimeout(function(){
           $this.addClass('animated ' + $this.data('animation'));
         }, 100);
@@ -101,7 +101,7 @@ function revealOnScroll() {
         offsetTop = $this.offset().top;
         // if NOT scroll over the offsetTop yet -> DONT execute animation
     if (scrolled + win_height_padded < offsetTop) {
-      $(this).removeClass('animated slideInRight slideInLeft popIn');
+      $(this).removeClass('animated slideInRight slideInLeft popIn fadeIn');
     }
   });
 }
