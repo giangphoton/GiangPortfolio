@@ -64,50 +64,50 @@ $(window).scroll(function(){
 });
 
 // TRIGGER ANIMATION ON SCROLL
+$(function() {
+  let $window           = $(window),
+  win_height_padded = $window.height() * 1.1;
+  let isTouch           = Modernizr.touch;
 
-let $window           = $(window),
-win_height_padded = $window.height() * 1.1;
-let isTouch           = Modernizr.touch;
+  if (isTouch) { $('.revealOnScroll').addClass('animated'); }
 
-if (isTouch) { $('.revealOnScroll').addClass('animated'); }
+  $window.on('scroll', revealOnScroll);
 
-$window.on('scroll', revealOnScroll);
-
-function revealOnScroll() {
-  let scrolled = $window.scrollTop(),
-    // win_height_padded = $window.height() * 1.1;
-    win_height = $window.height() * 1.0;
-
-
-  // Showed...
-  $(".revealOnScroll:not(.animated)").each(function () {
-    let $this     = $(this),
-        offsetTop = $this.offset().top;
-
-        // compare bottom vertical position (Y) of current window (scrolled + win_height)
-        // to top vertical position (Y) of current element ($this.offset().top)
-        // if scroll over the offsetTop -> execute animation
-    if (scrolled + win_height > offsetTop) {   
-        window.setTimeout(function(){
-          $this.addClass('animated ' + $this.data('animation'));
-        }, 100);
-    }
-  });
+  function revealOnScroll() {
+    let scrolled = $window.scrollTop(),
+      // win_height_padded = $window.height() * 1.1;
+      win_height = $window.height() * 1.0;
 
 
-  // Hidden...
-  $(".revealOnScroll.animated").each(function (index) {
-    let $this     = $(this),
-        offsetTop = $this.offset().top;
-        // if NOT scroll over the offsetTop yet -> DONT execute animation
-    if (scrolled + win_height_padded < offsetTop) {
-      $(this).removeClass('animated slideInRight slideInLeft popIn fadeIn');
-    }
-  });
-}
+    // Showed...
+    $(".revealOnScroll:not(.animated)").each(function () {
+      let $this     = $(this),
+          offsetTop = $this.offset().top;
 
-revealOnScroll();
+          // compare bottom vertical position (Y) of current window (scrolled + win_height)
+          // to top vertical position (Y) of current element ($this.offset().top)
+          // if scroll over the offsetTop -> execute animation
+      if (scrolled + win_height > offsetTop) {   
+          window.setTimeout(function(){
+            $this.addClass('animated ' + $this.data('animation'));
+          }, 100);
+      }
+    });
 
+
+    // Hidden...
+    $(".revealOnScroll.animated").each(function (index) {
+      let $this     = $(this),
+          offsetTop = $this.offset().top;
+          // if NOT scroll over the offsetTop yet -> DONT execute animation
+      if (scrolled + win_height_padded < offsetTop) {
+        $(this).removeClass('animated slideInRight slideInLeft popIn fadeIn');
+      }
+    });
+  }
+
+  revealOnScroll();
+});
 
 // ANIMATION
 const personalBoxes = document.querySelectorAll('.personal-box');
