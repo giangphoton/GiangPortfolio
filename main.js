@@ -85,7 +85,7 @@ function revealOnScroll() {
     if (scrolled + win_height_padded > offsetTop) {
         window.setTimeout(function(){
           $this.addClass('animated ' + $this.data('animation'));
-        }, 200);
+        }, 100);
     }
   });
 

@@ -263,6 +263,8 @@ section#about-personal_section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   grid-gap: 1rem;
+
+  animation-delay: 0.3s;
 }
 
 #about-personal_section .personal-box {
@@ -331,6 +333,10 @@ section#about-skills_section {
   grid-column: center-start / center-end;
   max-width: 600px;
   margin-bottom: 6rem;
+}
+
+#about-skills_section .about-skills_container {
+  animation-delay: 0.3s;
 }
 
 #about-skills_section .skill-name {
@@ -415,6 +421,8 @@ section#portfolio_section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 7rem;
+
+  animation-delay: 0.4s;
 }
 
 #portfolio_section .project {
@@ -500,6 +508,8 @@ section#blog_section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 7rem;
+  
+  animation-delay: 0.4s;
 }
 
 #blog_section .post__link {
