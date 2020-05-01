@@ -75,14 +75,19 @@ $window.on('scroll', revealOnScroll);
 
 function revealOnScroll() {
   let scrolled = $window.scrollTop(),
-    win_height_padded = $window.height() * 1.1;
+    // win_height_padded = $window.height() * 1.1;
+    win_height = $window.height() * 1.0;
+
 
   // Showed...
   $(".revealOnScroll:not(.animated)").each(function () {
     let $this     = $(this),
         offsetTop = $this.offset().top;
 
-    if (scrolled + win_height_padded > offsetTop) {
+        // compare bottom vertical position (Y) of current window (scrolled + win_height)
+        // to top vertical position (Y) of current element ($this.offset().top)
+        // if scroll over the offsetTop -> execute animation
+    if (scrolled + win_height > offsetTop) {      
         window.setTimeout(function(){
           $this.addClass('animated ' + $this.data('animation'));
         }, 100);
@@ -94,6 +99,7 @@ function revealOnScroll() {
   $(".revealOnScroll.animated").each(function (index) {
     let $this     = $(this),
         offsetTop = $this.offset().top;
+        // if NOT scroll over the offsetTop yet -> DONT execute animation
     if (scrolled + win_height_padded < offsetTop) {
       $(this).removeClass('animated slideInRight slideInLeft popIn');
     }
